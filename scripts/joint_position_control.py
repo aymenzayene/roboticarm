@@ -64,7 +64,7 @@ def handle_centroid(req):
 
 def main():
     global bot
-    #rospy.init_node('robotic_arm_control')
+   
     bot = InterbotixManipulatorXS("wx250s", "arm", "gripper")
     s = rospy.Service('centroid_service', Centroid, handle_centroid)
     rospy.spin()
